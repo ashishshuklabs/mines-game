@@ -8,12 +8,13 @@ interface TilesProps {
   width: number;
 }
 export const Tiles = (props: TilesProps) => {
-  const { revealedTiles = [], state, onNext, mines } = useGameContext();
+  const { state, onNext, mines } = useGameContext();
   const handleClick = (id: number) => {
     if (onNext) {
       onNext(id);
     }
   };
+  //Might not be as performant, potential for improvement.
   const renderTiles = () => {
     const tileArray: React.ReactNode[] = [];
     for (let i = 1; i <= props.count; i++) {
