@@ -36,12 +36,13 @@ const Game = () => {
     setAction("cashout");
     setLoading(true);
   };
-  console.log(loading, state);
   const disableCashout =
     loading ||
-    action === "cashout" ||
+    state === "cashout" ||
     revealedTiles.length < 5 ||
     state === "busted";
+
+  console.log("disable cashout", disableCashout, loading, action, state);
   return (
     <StyledDiv>
       <div className="btn-container">

@@ -50,5 +50,6 @@ const StyledButton = styled.button<StyledButtonProps>`
   &:disabled {
     background: ${(props) => props.disabledColor || props.color};
     cursor: default;
+    color: ${designVariables.palette.light300};
   }
 `;
